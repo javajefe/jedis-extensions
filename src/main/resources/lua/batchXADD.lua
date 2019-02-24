@@ -6,7 +6,7 @@
 
 -- KEYS[1] should be a Redis stream key
 -- ARGV list should contain message fields in JSON Object format (ex. "{\"q\": \"1\", \"w\": \"2\"}")
--- returns nil
+-- returns list of ids have been inserted into the stream
 
 -- Transforms a given table in following way:
 -- When input table is {'q': '1', 'w': '2'} then output table is {'q', '1', 'w', '2'}.

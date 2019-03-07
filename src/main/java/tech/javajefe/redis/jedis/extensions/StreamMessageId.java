@@ -1,4 +1,4 @@
-package org.javajefe.redis.jedis.extensions;
+package tech.javajefe.redis.jedis.extensions;
 
 /**
  * Created by BukarevAA on 24.02.2019.

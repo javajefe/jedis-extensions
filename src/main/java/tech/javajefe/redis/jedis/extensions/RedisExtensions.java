@@ -1,4 +1,4 @@
-package org.javajefe.redis.jedis.extensions;
+package tech.javajefe.redis.jedis.extensions;
 
 import com.google.gson.Gson;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package org.javajefe.redis.jedis.extensions
+package tech.javajefe.redis.jedis.extensions
 
 import org.testcontainers.containers.GenericContainer
 import org.testcontainers.spock.Testcontainers

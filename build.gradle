@@ -1,4 +1,4 @@
-group 'org.javajefe.redis-extensions'
+group 'tech.javajefe'
 version '0.0.1'
 
 apply plugin: 'groovy'

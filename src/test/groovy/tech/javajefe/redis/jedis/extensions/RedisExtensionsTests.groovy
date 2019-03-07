@@ -34,6 +34,17 @@ class RedisExtensionsTests extends Specification {
         jedis.close()
     }
 
+    def "All commands stay operatable after FLUSHALL / FLUSHDB / SCRIPT FLUSH / restart / etc."() {
+        when:
+            redisExtensions.batchXADD(streamName, [[i: 1 as String]])
+            jedis.scriptFlush()
+            redisExtensions.batchXADD(streamName, [[i: 2 as String]])
+            def streamSize = redisExtensions.XLEN(streamName)
+        then:
+            notThrown(Throwable)
+            streamSize == 2
+    }
+
     def "Empty key is not allowed in Batch XADD"() {
         when:
             redisExtensions.batchXADD('', [[k: 'v']])
